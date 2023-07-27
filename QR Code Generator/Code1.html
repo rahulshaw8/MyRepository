@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <div class="head-alert">
+                <div class="tit">Yousaf Ali Musad</div>
+                <div class="close-al"></div>
+            </div>
+            <div class="offer">
+                <p>Front End Tutorial On My Channel In Youtube</p>
+                <a 
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-group">
+            <input type="text" id="name" placeholder="Enter Your Info" />
+            <label class="form-label">Enter Your Info</label>
+        </div>
+
+        <div class="qr-code">
+            <div class="copy-btn" style="cursor: pointer; padding: 12px;">
+                <svg class="copy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="white" height="40px" width="40px" version="1.1" id="Capa_1" viewBox="0 0 352.804 352.804" xml:space="preserve"><g><path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651   v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z    M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804   z"/></g></svg>
+                <p class="secret-message">Copy</p>
+            </div>
+            <img src="" class="qr-img" />
+        </div>
+        <button>Generate QR Code</button>
+    </div>
+
+    <script>
+document.querySelector(".close-al").onclick = function() {
+    document.querySelector(".parent").style.display = "none"
+    document.body.style.cssText = "overflow-y:scroll"
+}
+
+
+let qrCod = document.querySelector(".qr-code");
+let theQr = document.querySelector(".qr-img");
+let input = document.querySelector("input");
+let btn = document.querySelector("button");
+let CopyBtn = document.querySelector(".copy-btn");
+
+
+
+btn.addEventListener("click", function generateQr() {
+    
+    if (!input.value == "") {
+        theQr.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + input.value;
+        let srco = theQr.src
+        qrCod.classList.add("show-img");
+    } else {
+        input.classList.add("error");
+        setTimeout(() => {
+        input.classList.remove("error");
+        }, 1000);
+    }
+    CopyBtn.onclick = function() {
+        let temp1 = document.createElement("textarea");
+        temp1.style.cssText = "z-index:-999999999999;position: absolute;left:-9999999999px;";
+        // value >>
+         temp1.value = theQr.src
+        document.body.appendChild(temp1);
+        temp1.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp1);
+        document.querySelector(".secret-message").innerHTML ="Copied"
+        setTimeout( function(){
+            document.querySelector(".secret-message").innerHTML ="Copy"
+        },2000)
+    };
+
+    }
+
+  );
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
