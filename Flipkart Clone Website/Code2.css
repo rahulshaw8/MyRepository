@@ -1,0 +1,98 @@
+@import"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+body{
+    margin:0;
+    padding:0;
+}
+img{
+    width:60px;
+    margin-left:30px;
+}
+i{
+   overflow:hidden;
+   font-size:20px;
+   padding:1px;
+   margin-top:5px;
+   color:white;
+}
+th{
+    color:white;
+    text-align:center;
+}
+th.a{
+    color:black;
+    font-size:10px;
+}
+img.a{
+    width:100%;
+    margin-left:0px;
+}
+th.c{
+    color:black;
+}
+.items{
+    display:flex;
+    overflow-x:scroll;
+}
+.items img{
+    width:60px;
+    margin-left:5px;
+}
+.img1{
+   width:100%; 
+   margin-left:-0px;
+}
+.products{
+    display:flex;
+    flex-direction:column;
+    background:white;
+    padding:10px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+.products p.title{
+    font-weight:600;
+    padding:0px 5px;
+}
+.products p.title1{
+    font-weight:300;
+    margin-top:-15px;
+    padding:0px 5px;
+}
+.products p.title2 img{
+    width:100%;
+    margin:0;
+    border-radius:10px;
+}
+.product-items{
+    display:flex;
+    background:var(--secondary);
+}
+.product-items .item img{
+    width:100%;
+    margin:0;
+}
+.banner {
+    margin:10px 0;
+}
+.banner img{
+    width:100%;
+    margin:0;
+}
+.a{
+    width:100%;
+}
+.b{
+    width:100%;
+    margin-left:0;
+    margin-top:10px;
+}
+.c{
+    width:100%;
+    margin-left:0;
+    margin-top:10px;
+}
+.d{
+    width:100%;
+    margin-left:0;
+    margin-top:10px;
+    margin-bottom:10px;
+}
