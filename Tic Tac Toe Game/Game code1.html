@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div id="tictacToe">
+      <button id="button" onclick="putox(0)" class="l">
+      </button>
+      <button id="button" onclick="putox(1)">
+      </button>
+      <button id="button" onclick="putox(2)">
+      </button>
+      <button id="button" onclick="putox(3)" class="l">
+      </button>
+      <button id="button" onclick="putox(4)" >
+      </button>
+      <button id="button" onclick="putox(5)" >
+      </button>
+      <button id="button" onclick="putox(6)" class="l b">
+      </button>
+      <button id="button" onclick="putox(7)" class="b">
+      </button>
+      <button id="button" onclick="putox(8)" class="b">
+      </button>
+    </div>
+    <button onclick="clean()">
+        Clear
+    </button>
+    <button onclick='restart()'>
+        Restart
+    </button>
+    <div id="atbottom">
+      <span id="le">Player 1: 0</span>
+      <button id="res" onclick="result()">
+          Result
+      </button>
+      <span id="re">Player 2: 0</span>
+    </div>
+  </body>
+</html>
