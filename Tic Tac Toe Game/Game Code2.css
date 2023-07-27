@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+body {
+    margin: 0;
+    font-family: "Open Sans";
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+*, *:focus {
+    outline: none;
+    box-sizing: border-box;
+}
+
+#tictacToe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 180px;
+    width: 180px;
+    display:table ;
+}
+
+#button {
+    background: transparent;
+    height: 33.33%;
+    width: 33.33%;
+    float: left;
+    border: 0;
+    border-left: 1px dashed;
+    border-bottom: 1px dashed;
+    font: inherit;
+    margin: 0;
+}
+
+button {
+    font-family: inherit;
+}
+
+button.l {
+    border-left: 0 !important;
+}
+
+button.b {
+    border-bottom: 0 !important;
+}
+
+span, #res{
+  font-size: 14px;
+  font-family: "Open Sans";
+  padding: 5px;
+  margin-top: 7px;
+    
+}
+
+#le, #re, #res {
+    color: #eef;
+    border-radius: 3pt;
+}
+
+span#le {
+    float: left;
+    background-color: #223aed;
+}
+
+span#re {
+    float: right;
+    background-color: #33aede;
+}
+
+#res {
+    background-color: #234;
+    border: 0;
+    margin-bottom: 5px;
+}
+
+
+#atbottom {
+    position: fixed;
+    bottom: 0;
+    padding: 0 5px;
+    left: 0;
+    width: 100%;
+    background-color: #eee;
+}
